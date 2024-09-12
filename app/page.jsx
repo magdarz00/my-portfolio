@@ -1,38 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
-// components
 import Social from "@/components/Social";
-import Photo from "@/components/Photo";
 
 const Home = () => {
   return (
-    <section className="h-full">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          {/* text */}
-          <div className="text-center xl:text-left">
-            <span className="text-xl">Frontend Developer</span>
-            <h1 className="h1 mb-6">
-              <span className="text-accent">Magda Rzepa</span>
-            </h1>
-            <p className="max-w-[500px] mb-9 text-black">
-              I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.
-            </p>
-            {/* btn and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Pobierz CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
-              <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
-              </div>
-            </div>
+    <section className="relative flex xl:mt-12 h-max-screen">
+      <div className="container mx-auto flex flex-col gap-4 xl:gap-14">
+        <div className="flex flex-col text-black font-bold tracking-tighter leading-none uppercase">
+          <div className="text-6xl md:text-7xl lg:text-8xl">Frontend Developer</div>
+          <div className="text-6xl md:text-7xl lg:text-8xl">& UX/UI Designer</div>
+          <div className="text-6xl md:text-7xl lg:text-8xl mt-2">Portfolio.</div>
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-2 lg:gap-0">
+            <div className="text-5xl md:text-6xl lg:text-7xl mt-2">Magda Rzepa</div>
+            <div className="text-4xl md:text-5xl xl:text-6xl font-bold text-accent opacity-80">2024</div>
           </div>
-          {/* photo */}
-          <div>
-            <Photo />
+        </div>
+
+        <div className="flex flex-col xl:flex-row gap-6">
+          <Button
+            as="a"
+            href="/Magda_Rzepa_CV.pdf"
+            download
+            variant="outline"
+            size="lg"
+            className="uppercase hover:text-white flex items-center gap-2"
+          >
+            <span>Pobierz CV</span>
+            <FiDownload className="text-xl" />
+          </Button>
+          <div className="mb-8 xl:mb-0 xl:self-center">
+            <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-white hover:transition-all duration-500" />
           </div>
         </div>
       </div>

@@ -4,7 +4,9 @@
 
 @layer base {
     body {
-        @apply font-primary bg-primary text-black leading-loose;
+        @apply font-primary text-black leading-loose;
+        background-color: #a7cdff;
+        background: radial-gradient(circle at center, #a7cdff, #fefef5);
     }
 
     .h1 {

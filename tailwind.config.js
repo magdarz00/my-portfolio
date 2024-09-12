@@ -21,17 +21,17 @@ module.exports = {
     },
     fontFamily: {
       primary: "var(--font-poppins)",
+      secondary: "var(--font-tenor-sans)",
     },
     extend: {
-
       colors: {
-        primary: "#FFFEEF",
+        primary: '#a7cdff',
+        secondary: '#a7cdff',
         accent: {
-          DEFAULT: "#F20E0E",
-          hover: "#00e187",
+          DEFAULT: "#6f89aa",
+          hover: "#f05053",
         }
       }, 
-
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
