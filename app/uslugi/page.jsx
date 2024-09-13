@@ -1,7 +1,8 @@
 "use client";
 
 import { BsArrowDownRight } from "react-icons/bs";
-import Link from "next/link";
+// import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
     {
@@ -30,8 +31,6 @@ const services = [
     },
 ];
 
-import { motion } from "framer-motion";
-
 const Services = () => {
     return (
         <section className="min-h-screen flex flex-col justify-center py-0 xl:py-12 mb-[20px] lg:mb-[40px]">
@@ -40,13 +39,22 @@ const Services = () => {
                     initial={{ opacity: 0 }}
                     animate={{
                         opacity: 1,
-                        transition: { delay: 1, duration: 0.4, ease: "easeIn" },
+                        transition: { delay: 0.5, duration: 0.6, ease: "easeOut" },
                     }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:gap-[40px] items-stretch"
                 >
                     {services.map((service, index) => {
                         return (
-                            <div key={index} className="flex-1 flex flex-col justify-between lg:gap-6 group h-full">
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: { delay: 0.6 + index * 0.2, duration: 0.6, ease: "easeOut" },
+                                }}
+                                className="flex-1 flex flex-col justify-between lg:gap-6 group h-full"
+                            >
                                 {/* top */}
                                 <div>
                                     {/* title */}
@@ -63,7 +71,7 @@ const Services = () => {
                                 </div>
                                 {/* border */}
                                 <div className="border-b border-black/20 w-full mt-[40px]"></div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </motion.div>

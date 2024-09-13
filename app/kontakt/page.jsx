@@ -54,8 +54,16 @@ const Contact = () => {
             }}
             className="py-12 relative"
         >
-            <div className="container mx-auto relative flex flex-col lg:flex-row items-start lg:space-x-16">
-                <div className="flex-1 mb-12 lg:mb-0 text-left w-full lg:1/3">
+            <div className="container mx-auto flex flex-col lg:flex-row items-start lg:space-x-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{
+                        opacity: 1,
+                        y: 0,
+                        transition: { delay: 0.6, duration: 0.6, ease: "easeOut" },
+                    }}
+                    className="flex-1 mb-12 lg:mb-0 text-left w-full lg:w-1/3"
+                >
                     <h1 className="text-black font-bold tracking-tighter uppercase leading-none text-4xl mb-8">
                         Skontaktuj się
                     </h1>
@@ -73,12 +81,15 @@ const Contact = () => {
                     >
                         (+48) 570 304 383
                     </a>
-                </div>
+                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+                    animate={{
+                        opacity: 1,
+                        y: 0,
+                        transition: { delay: 0.8, duration: 0.6, ease: "easeOut" },
+                    }}
                     className="w-full lg:w-2/3"
                 >
                     <form onSubmit={handleSubmit} className="bg-white/50 rounded-lg p-8">
@@ -152,7 +163,7 @@ const Contact = () => {
                     </form>
                 </motion.div>
             </div>
-        </motion.section >
+        </motion.section>
     );
 };
 
