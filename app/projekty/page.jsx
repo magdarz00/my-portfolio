@@ -39,7 +39,7 @@ const projects = [
         stack: [{ name: "HTML5" }, { name: "CSS3" }],
         image: "/assets/work/mockup2.png",
         live: "https://magdarz00.github.io/florist-shop/index.html",
-        github: "https://github.com/magdarz00/florist-shop-page",
+        github: "https://github.com/magdarz00/florist-shop",
     },
 ];
 
