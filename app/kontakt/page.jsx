@@ -162,7 +162,7 @@ const Contact = () => {
                                 type="submit"
                                 className={`bg-white/50 text-accent/50 font-medium py-3 w-full rounded-md transition-all ${
                                     isFormValid
-                                        ? "bg-gray-900 text-white hover:bg-gray-950"
+                                        ? "bg-black/90 text-white hover:bg-black"
                                         : "opacity-50 cursor-not-allowed"
                                 } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 disabled={isSubmitting || !isFormValid}
