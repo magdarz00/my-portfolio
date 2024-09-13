@@ -160,11 +160,10 @@ const Contact = () => {
                         <div className="text-center lg:text-left">
                             <button
                                 type="submit"
-                                className={`bg-white/50 text-accent/50 font-medium py-3 w-full rounded-md transition-all ${
-                                    isFormValid
-                                        ? "bg-black/90 text-white hover:bg-black"
-                                        : "opacity-50 cursor-not-allowed"
-                                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`font-medium py-3 w-full rounded-md transition-all ${isFormValid
+                                    ? "bg-black bg-opacity-90 text-white hover:bg-black"
+                                    : "bg-white bg-opacity-50 text-accent text-opacity-50"
+                                    } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 disabled={isSubmitting || !isFormValid}
                             >
                                 {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
