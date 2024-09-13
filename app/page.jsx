@@ -18,9 +18,9 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col xl:flex-row gap-6">
-          <Button
+          {/* <Button
             as="a"
-            href="/Magda_Rzepa_CV.pdf"
+            href="/public/Magda_Rzepa_CV.pdf"
             download
             variant="outline"
             size="lg"
@@ -28,7 +28,7 @@ const Home = () => {
           >
             <span>Pobierz CV</span>
             <FiDownload className="text-xl" />
-          </Button>
+          </Button> */}
           <div className="mb-8 xl:mb-0 xl:self-center">
             <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-white hover:transition-all duration-500" />
           </div>

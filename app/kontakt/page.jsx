@@ -59,12 +59,20 @@ const Contact = () => {
                     <h1 className="text-black font-bold tracking-tighter uppercase leading-none text-4xl mb-8">
                         Skontaktuj się
                     </h1>
-                    <p className="text-black tracking-tighter leading-none text-lg mb-6">
+
+                    <a
+                        href="mailto:magda00rzepa@gmail.com"
+                        className="text-black tracking-tighter leading-none text-lg mb-6 block hover:text-accent transition-all"
+                    >
                         magda00rzepa@gmail.com
-                    </p>
-                    <p className="text-black tracking-tighter leading-none text-lg">
+                    </a>
+
+                    <a
+                        href="tel:+48570304383"
+                        className="text-black tracking-tighter leading-none text-lg block hover:text-accent transition-all"
+                    >
                         (+48) 570 304 383
-                    </p>
+                    </a>
                 </div>
 
                 <motion.div
@@ -144,7 +152,7 @@ const Contact = () => {
                     </form>
                 </motion.div>
             </div>
-        </motion.section>
+        </motion.section >
     );
 };
 

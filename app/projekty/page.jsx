@@ -27,7 +27,7 @@ const projects = [
             "Nowoczesna strona portfolio dla architektki, stworzona z użyciem Next.js, Tailwind CSS i Node.js. Zapewnia szybkie ładowanie, optymalizację SEO i minimalistyczny, responsywny design, idealnie prezentujący projekty architektoniczne.",
         stack: [{ name: "Next.js" }, { name: "Tailwind CSS" }, { name: "React.js" }],
         image: "/assets/work/mockup1.png",
-        live: "",
+        live: "https://portfolio-architect.vercel.app/",
         github: "https://github.com/magdarz00/Project-portfolio",
     },
     {
@@ -38,7 +38,7 @@ const projects = [
             "Projekt strony internetowej dla kwiaciarni został stworzony z wykorzystaniem HTML i CSS, co było celowym wyborem w celu zapewnienia prostoty i efektywności.",
         stack: [{ name: "HTML5" }, { name: "CSS3" }],
         image: "/assets/work/mockup2.png",
-        live: "",
+        live: "https://magdarz00.github.io/florist-shop/index.html",
         github: "https://github.com/magdarz00/florist-shop-page",
     },
 ];
