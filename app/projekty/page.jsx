@@ -24,7 +24,7 @@ const projects = [
         category: "frontend",
         title: "Project 1",
         description:
-            "Nowoczesna strona portfolio dla architektki, stworzona z użyciem Next.js, Tailwind CSS i Node.js. Zapewnia szybkie ładowanie, optymalizację SEO i minimalistyczny, responsywny design, idealnie prezentujący projekty architektoniczne.",
+            "Nowoczesna strona portfolio dla architektki, stworzona z użyciem Next.js, Tailwind CSS i React.js. Zapewnia szybkie ładowanie, optymalizację SEO i minimalistyczny, responsywny design, idealnie prezentujący projekty architektoniczne.",
         stack: [{ name: "Next.js" }, { name: "Tailwind CSS" }, { name: "React.js" }],
         image: "/assets/work/mockup1.png",
         live: "https://portfolio-architect.vercel.app/",
