@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -12,6 +12,12 @@ const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
+    const [isFormValid, setIsFormValid] = useState(false);
+
+    useEffect(() => {
+        const isValid = formData.name && formData.email && formData.message;
+        setIsFormValid(isValid);
+    }, [formData]);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -148,14 +154,18 @@ const Contact = () => {
                             <p className="text-accent font-medium mb-4">{successMessage}</p>
                         )}
                         {errorMessage && (
-                            <p className="text-red-800 font-medium mb-4">{errorMessage}</p>
+                            <p className="text-red-500 font-medium mb-4">{errorMessage}</p>
                         )}
 
                         <div className="text-center lg:text-left">
                             <button
                                 type="submit"
-                                className={`bg-white/50 text-accent/50 font-medium py-3 w-full rounded-md hover:bg-black hover:text-white transition-all ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                disabled={isSubmitting}
+                                className={`bg-white/50 text-accent/50 font-medium py-3 w-full rounded-md transition-all ${
+                                    isFormValid
+                                        ? "bg-gray-900 text-white hover:bg-gray-950"
+                                        : "opacity-50 cursor-not-allowed"
+                                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                disabled={isSubmitting || !isFormValid}
                             >
                                 {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
                             </button>
