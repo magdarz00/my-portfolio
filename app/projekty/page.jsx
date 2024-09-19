@@ -133,18 +133,20 @@ const Work = () => {
                         >
                             {projects.map((project, index) => (
                                 <SwiperSlide key={index} className="w-full">
-                                    <div className="h-[300px] md:h-[500px] 2xl:h-[700px] relative group flex justify-center items-center">
-                                        <div className="relative w-full h-full">
-                                            <Image
-                                                src={project.image}
-                                                fill
-                                                className="object-fill rounded-lg"
-                                                alt={project.title}
-                                                priority={index === 0}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            />
+                                    <Link href={project.live}>
+                                        <div className="h-[300px] md:h-[500px] 2xl:h-[700px] relative group flex justify-center items-center">
+                                            <div className="relative w-full h-full">
+                                                <Image
+                                                    src={project.image}
+                                                    fill
+                                                    className="object-fill rounded-lg"
+                                                    alt={project.title}
+                                                    priority={index === 0}
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                             <WorkSliderBtns
@@ -153,6 +155,7 @@ const Work = () => {
                             />
                         </Swiper>
                     </motion.div>
+
                 </div>
             </div>
         </motion.section>
